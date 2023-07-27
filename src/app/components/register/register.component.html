@@ -14,13 +14,32 @@
         </div>
 
         <div class="aboveFormText">
-          <h4>Sign in</h4>
-          <p class="mb-4 slogan">Sign in to continue to ChatHub</p>
+          <h4>Sign up</h4>
+          <p class="mb-4 slogan">Get your ChatHub account now.</p>
         </div>
 
         <div class="formContainer">
           <div class="formDiv">
             <form action="" class="ng-pristine ng-valid ng-touched">
+              <div class="mb-3">
+                <label for="" class="form-label">Username</label>
+                <div
+                  class="input-group mb-3 bg-soft-light input-group-lg rounded-lg"
+                >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text border-light text-muted">
+                      <i style="color: white" class="fa-regular fa-user"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    class="inputclass form-control bg-soft-light border-light ng-valid ng-dirty ng-touched"
+                    formControlName="username"
+                    placeholder="Enter your username"
+                  />
+                </div>
+              </div>
+
               <div class="mb-3">
                 <label for="" class="form-label">Email</label>
                 <div
@@ -28,7 +47,10 @@
                 >
                   <div class="input-group-prepend">
                     <span class="input-group-text border-light text-muted">
-                      <i style="color: white" class="fa fa-user"></i>
+                      <i
+                        style="color: white"
+                        class="fa-regular fa-envelope"
+                      ></i>
                     </span>
                   </div>
                   <input
@@ -41,16 +63,6 @@
               </div>
 
               <div class="form-group mb-4">
-                <div class="float-end">
-                  <a
-                    _ngcontent-foi-c127=""
-                    routerlink="/account/reset-password"
-                    class="text-muted font-size-13"
-                    ng-reflect-router-link="/account/reset-password"
-                    href="/account/reset-password"
-                    >Forgot your password?</a
-                  >
-                </div>
                 <label for="" class="form-label">Password</label>
                 <div
                   class="input-group mb-3 bg-soft-light input-group-lg rounded-lg"
@@ -69,18 +81,14 @@
                 </div>
               </div>
 
-              <div class="form-check mb-4">
-                <input
-                  type="checkbox"
-                  id="remember-check"
-                  class="form-check-input"
-                />
-                <label for="remember-check" class="form-check-label"
-                  >Remember me</label
-                >
-              </div>
               <div class="d-grid">
                 <button class="mat-button" mat-raised-button>Sign In</button>
+              </div>
+              <div class="mt-4 text-center">
+                <p class="text-muted mb-0">
+                  By registering you agree to the ChatHub
+                  <a class="text-primary">Terms of Use</a>
+                </p>
               </div>
             </form>
           </div>
@@ -88,10 +96,8 @@
 
         <div class="mt-5 text-center">
           <p>
-            Dont have an account ?
-            <a class="fw-medium text-primary" routerLink="/register">
-              Signup now
-            </a>
+            Already have an account ?
+            <a class="fw-medium text-primary" routerLink="/login"> Signin </a>
           </p>
         </div>
       </div>
