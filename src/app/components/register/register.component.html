@@ -20,7 +20,7 @@
 
         <div class="formContainer">
           <div class="formDiv">
-            <form action="" class="ng-pristine ng-valid ng-touched">
+            <form class="ng-pristine ng-valid ng-touched" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
               <div class="mb-3">
                 <label for="" class="form-label">Username</label>
                 <div

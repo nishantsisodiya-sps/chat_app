@@ -1,0 +1,151 @@
+<div class="layout-wrapper d-lg-flex">
+  <div class="side-menu flex-lg-column me-lg-1">
+    <div class="navbar-brand-box">
+      <a class="logo logo-dark">
+        <span class="logo-sm"
+          ><img src="../../../assets/logoHalf.png" alt="" />
+        </span>
+      </a>
+    </div>
+    <div class="flex-lg-column my-auto">
+      <ul
+        role="tablist"
+        class="nav nav-pills side-menu-nav justify-content-center"
+      >
+        <li
+          ngbtooltip="Profile"
+          class="nav-item"
+          ng-reflect-ngb-tooltip="Profile"
+          routerLink="/home/profile"
+        >
+          <a id="pills-user-tab" class="nav-link">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </li>
+
+        <li ngbtooltip="Chats" class="nav-item" ng-reflect-ngb-tooltip="Chats">
+          <a id="pills-chat-tab" class="nav-link active">
+            <i class="ri-message-3-line"></i>
+          </a>
+        </li>
+
+        <li
+          ngbtooltip="Groups"
+          class="nav-item"
+          ng-reflect-ngb-tooltip="Groups"
+        >
+          <a id="pills-groups-tab" class="nav-link pills-groups-tab">
+            <i class="ri-group-line"></i>
+          </a>
+        </li>
+
+        <li
+          ngbtooltip="Contacts"
+          placement="top"
+          class="nav-item"
+          ng-reflect-ngb-tooltip="Contacts"
+          ng-reflect-placement="top"
+        >
+          <a id="pills-contacts-tab" class="nav-link">
+            <i class="ri-contacts-line"></i>
+          </a>
+        </li>
+
+        <li
+          ngbtooltip="Settings"
+          class="nav-item"
+          ng-reflect-ngb-tooltip="Settings"
+        >
+          <a id="pills-setting-tab" class="nav-link">
+            <i class="ri-settings-2-line"></i>
+          </a>
+        </li>
+
+        <li
+          ngbdropdown=""
+          placement="top"
+          class="nav-item profile-user-dropdown d-inline-block d-lg-none dropup"
+          ng-reflect-placement="top"
+        >
+          <a
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ngbdropdowntoggle=""
+            class="dropdown-toggle nav-link"
+          >
+            <img
+              src="../../../assets/profile.png"
+              alt=""
+              class="profile-user rounded-circle"
+            />
+          </a>
+          <div ngbdropdownmenu="" class="dropdown-menu">
+            <a class="dropdown-item"
+              >Profile <i class="ri-profile-line float-end text-muted"></i>
+            </a>
+            <a class="dropdown-item"
+              >Setting <i class="ri-settings-3-line float-end text-muted"></i>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="javascript: void(0);" class="dropdown-item"
+              >Log out
+              <i class="ri-logout-circle-r-line float-end text-muted"></i>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="flex-lg-column d-none d-lg-block">
+      <ul class="nav side-menu-nav justify-content-center">
+        <li
+          ngbdropdown=""
+          placement="top-left"
+          class="nav-item btn-group profile-user-dropdown dropup"
+          ng-reflect-placement="top-left"
+        >
+          <a
+            role="button"
+            ngbdropdowntoggle=""
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            class="dropdown-toggle nav-link"
+          >
+            <img
+              src="../../../assets/profile.png"
+              width="98%"
+              alt=""
+              class="profile-user rounded-circle"
+            />
+          </a>
+          <div ngbdropdownmenu="" class="dropdown-menu">
+            <a class="dropdown-item"
+              >Profile
+              <i
+                _ngcontent-hly-c125=""
+                class="ri-profile-line float-end text-muted"
+              ></i></a
+            ><a _ngcontent-hly-c125="" class="dropdown-item"
+              >Setting <i class="ri-settings-3-line float-end text-muted"></i
+            ></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item"
+              >Log out
+              <i class="ri-logout-circle-r-line float-end text-muted"></i
+            ></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chat-leftsidebar me-lg-1">
+    <div class="tab-content">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,156 @@
+::ng-deep body {
+  background-color: #303841;
+  color: white;
+
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+
+  line-height: var(--bs-body-line-height);
+  color: #a6b0cf;
+  text-align: var(--bs-body-text-align);
+
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media (min-width: 992px) {
+  .d-lg-flex {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .me-lg-1 {
+    margin-right: 0.25rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .flex-lg-column {
+    flex-direction: column !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-lg-block {
+    display: block !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .side-menu {
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    min-width: 100%;
+    min-height: auto;
+    display: block;
+    border-top: 1px solid var(--bs-border-color);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .side-menu .navbar-brand-box {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .side-menu-nav .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 5px 0;
+  }
+}
+
+.side-menu {
+  min-width: 75px;
+  max-width: 75px;
+  height: 100vh;
+  min-height: 570px;
+  background-color: var(--bs-sidebar-bg);
+  display: flex;
+  z-index: 9;
+  box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
+}
+
+.side-menu .navbar-brand-box {
+  text-align: center;
+}
+.side-menu .navbar-brand-box .logo-dark {
+  display: block;
+}
+.side-menu .navbar-brand-box .logo {
+  line-height: 70px;
+}
+a {
+  color: #7269ef;
+  text-decoration: none;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+ol,
+ul,
+dl {
+  margin-top: 0;
+  cursor: pointer;
+}
+.side-menu-nav .nav-item {
+  margin: 7px 0;
+}
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.side-menu-nav .nav-item {
+  margin: 7px 0;
+}
+.side-menu-nav .nav-item .nav-link {
+  text-align: center;
+  font-size: 24px;
+  color: var(--bs-sidebar-menu-item-color);
+
+  line-height: 56px;
+}
+.side-menu-nav .profile-user {
+  height: 36px;
+  width: 36px;
+  background-color: var(--bs-gray-300);
+  padding: 3px;
+}
+.profile-user {
+  position: relative;
+  display: inline-block;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+
+/* sidebar css  */
+
+
+@media (min-width: 992px){
+.chat-leftsidebar {
+    min-width: 380px;
+    max-width: 380px;
+}}
+
+@media (min-width: 992px){
+    .me-lg-1 {
+        margin-right: 0.25rem !important;
+    }
+}
+
+
+.chat-leftsidebar {
+    height: 100vh;
+    background-color: #303841;
+}

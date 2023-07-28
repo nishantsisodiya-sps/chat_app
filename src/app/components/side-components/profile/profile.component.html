@@ -1,0 +1,144 @@
+<div>
+  <div class="px-4 pt-4">
+    <div class="user-chat-nav float-end">
+      <div class="dropdown">
+        <a
+          ngbdropdowntoggle=""
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          class="dropdown-toggle font-size-18 text-muted"
+        >
+          <i class="ri-more-2-fill"></i>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right">
+          <a
+            _ngcontent-hly-c114=""
+            href="javascript:void(0);"
+            class="dropdown-item"
+            >Edit</a
+          >
+          <a
+            _ngcontent-hly-c114=""
+            href="javascript:void(0);"
+            class="dropdown-item"
+            >Action</a
+          >
+          <div _ngcontent-hly-c114="" class="dropdown-divider"></div>
+          <a
+            _ngcontent-hly-c114=""
+            href="javascript:void(0);"
+            class="dropdown-item"
+            >Another actionn</a
+          >
+        </div>
+      </div>
+      <h4 _ngcontent-hly-c114="" class="mb-0">My Profile</h4>
+    </div>
+  </div>
+
+  <div class="text-center p-4 border-bottom">
+    <div class="mb-4">
+      <img
+        alt=""
+        class="rounded-circle avatar-lg img-thumbnail"
+        src="../../../../assets/profile.png"
+      />
+    </div>
+    <h5 class="font-size-16 mb-1 text-truncate">Admin</h5>
+    <p class=" text-truncate mb-1">
+      <i
+        class="ri-record-circle-fill font-size-10 text-success me-1 d-inline-block" 
+      >
+      </i>
+      Active
+    </p>
+  </div>
+
+  <perfect-scrollbar class="p-4 user-profile-desc">
+    <div style="position: static" class="ps ps--active-y">
+      <div class="ps-content">
+        <div class="text-muted">
+          <p class="mb-4" style="color: white;">
+            If several languages coalesce, the grammar of the resulting language
+            is more simple and regular than that of the individual.
+          </p>
+        </div>
+        <ngb-accordion
+          role="tablist"
+          activeids="about"
+          class="accordion"
+          ng-reflect-active-ids="about"
+          ng-reflect-close-other-panels="true"
+          aria-multiselectable="false"
+        >
+          <div class="accordion-item border card mb-2 shadow-none">
+            <div role="tab" class="accordion-header" id="about-header">
+              <button
+                type="button"
+                class="accordion-button"
+                ng-reflect-ngb-panel-toggle="[object Object]"
+                aria-expanded="true"
+                aria-controls="about"
+              >
+                <h5 class="font-size-14 m-0">
+                  <i class="ri-user-2-line me-2 align-middle d-inline-block">
+                  </i>
+                  About
+                </h5>
+              </button>
+            </div>
+            <div
+              role="tabpanel"
+              id="about"
+              aria-labelledby="about-header"
+              class="collapse show"
+            >
+              <div class="accordion-body">
+                <div>
+                  <p class="text-muted mb-1">Name</p>
+                  <h5 class="font-size-14">admin</h5>
+                </div>
+                <div class="mt-4">
+                  <p class="text-muted mb-1">Email</p>
+                  <h5 class="font-size-14">abc@123.com</h5>
+                </div>
+                <div class="mt-4">
+                  <p class="text-muted mb-1">Time</p>
+                  <h5 class="font-size-14">11:40 AM</h5>
+                </div>
+                <div class="mt-4">
+                  <p class="text-muted mb-1">Location</p>
+                  <h5 class="font-size-14 mb-0">California, USA</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item border card mb-2 shadow-none">
+            <div role="tab" class="accordion-header" id="file-header">
+              <button
+                type="button"
+                class="accordion-button collapsed"
+                ng-reflect-ngb-panel-toggle="[object Object]"
+                aria-expanded="false"
+                aria-controls="file"
+              >
+                <h5 class="font-size-14 m-0">
+                  <i
+                    class="ri-attachment-line me-2 align-middle d-inline-block"
+                  >
+                  </i>
+                  Attached Files
+                </h5>
+              </button>
+            </div>
+          </div>
+          </ngb-accordion>
+      </div>
+      <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+
+      </div>
+    </div>
+  </perfect-scrollbar>
+</div>

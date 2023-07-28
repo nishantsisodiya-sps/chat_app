@@ -20,7 +20,7 @@
 
         <div class="formContainer">
           <div class="formDiv">
-            <form action="" class="ng-pristine ng-valid ng-touched">
+            <form [formGroup]="loginForm" class="ng-pristine ng-valid ng-touched" (ngSubmit)="onSubmit()">
               <div class="mb-3">
                 <label for="" class="form-label">Email</label>
                 <div
@@ -65,22 +65,19 @@
                     class="inputclass form-control bg-soft-light border-light ng-valid ng-dirty ng-touched"
                     formControlName="password"
                     placeholder="Enter your Password"
+                    
                   />
                 </div>
               </div>
 
               <div class="form-check mb-4">
-                <input
-                  type="checkbox"
-                  id="remember-check"
-                  class="form-check-input"
-                />
+                <input  type="checkbox"  id="remember-check" class="form-check-input" formControlName="rememberMe">
                 <label for="remember-check" class="form-check-label"
                   >Remember me</label
                 >
               </div>
               <div class="d-grid">
-                <button class="mat-button" mat-raised-button>Sign In</button>
+                <button type="submit" class="mat-button" mat-raised-button>Sign In</button>
               </div>
             </form>
           </div>
