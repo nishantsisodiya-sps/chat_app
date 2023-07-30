@@ -17,13 +17,20 @@
           class="nav-item"
           ng-reflect-ngb-tooltip="Profile"
           routerLink="/home/profile"
+          routerLinkActive="active"
         >
           <a id="pills-user-tab" class="nav-link">
             <i class="fa-regular fa-user"></i>
           </a>
         </li>
 
-        <li ngbtooltip="Chats" class="nav-item" ng-reflect-ngb-tooltip="Chats">
+        <li
+          ngbtooltip="Chats"
+          class="nav-item"
+          ng-reflect-ngb-tooltip="Chats"
+          routerLink="/home/chat"
+          routerLinkActive="active"
+        >
           <a id="pills-chat-tab" class="nav-link active">
             <i class="ri-message-3-line"></i>
           </a>
@@ -143,9 +150,7 @@
 
   <div class="chat-leftsidebar me-lg-1">
     <div class="tab-content">
-        <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
     </div>
   </div>
-
-
 </div>

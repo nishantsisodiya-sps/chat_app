@@ -1,0 +1,16 @@
+@media (min-width: 992px) {
+  .chat-leftsidebar {
+    min-width: 380px;
+    max-width: 380px;
+  }
+}
+@media (min-width: 992px) {
+  .me-lg-1 {
+    margin-right: 0.25rem !important;
+  }
+}
+
+.chat-leftsidebar {
+  height: 100vh;
+  background-color: var(--bs-sidebar-sub-bg);
+}
