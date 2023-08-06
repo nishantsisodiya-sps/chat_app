@@ -1,5 +1,7 @@
 ::ng-deep body {
   background-color: #303841;
+
+
   color: white;
 
   font-family: var(--bs-body-font-family);

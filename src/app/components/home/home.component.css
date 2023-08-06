@@ -1,5 +1,6 @@
 ::ng-deep body {
   background-color: #303841;
+
   color: white;
 
   font-family: var(--bs-body-font-family);
@@ -7,6 +8,7 @@
 
   line-height: var(--bs-body-line-height);
   color: #a6b0cf;
+
   text-align: var(--bs-body-text-align);
 
   -webkit-text-size-adjust: 100%;
@@ -152,5 +154,6 @@ dl {
 
 .chat-leftsidebar {
     height: 100vh;
-    background-color: #303841;
+  background-color: #262e35;
+   
 }

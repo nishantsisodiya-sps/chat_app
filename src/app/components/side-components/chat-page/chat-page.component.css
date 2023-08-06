@@ -14,3 +14,145 @@
   height: 100vh;
   background-color: var(--bs-sidebar-sub-bg);
 }
+
+.Search input{
+  background: #303841;
+  border-radius: 2px;
+  border: transparent;
+  height: 2.5rem;
+  cursor: pointer;
+width: 100%;
+padding: 5px 16px 5px 48px;
+}
+.Search{
+  position: relative;
+}
+.Search input::placeholder{
+  color: #8d99ae;
+}
+.Search i{
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: #8d99ae;
+  font-size: 17px;
+  pointer-events: none;
+  margin-right: 10rem;
+  transform: translateY(-50%);
+}
+
+.Search .form-control:focus {
+  -webkit-box-shadow: none!important;
+      -moz-box-shadow: none!important;
+      box-shadow: none!important;
+  }
+  
+  .chat-box{
+position: relative;
+overflow-y: auto;
+height: calc(100% - 110px);
+  }
+  .chat-box .chat-block{
+    position: relative;
+    width: 100%;
+    display: flex;
+   padding: 13px 20px 0px 30px;
+   
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .chat-box .chat-block .imgbx{
+    position: relative;
+    width: 60px;
+    height: 50px;
+    overflow: hidden;
+   margin-right: 10px;
+   margin-bottom: 20px;
+
+  }
+  .online_icon {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: #4cd137;
+    border-radius: 50%;
+    bottom: 4px;
+    right: 1px;
+    border: 1.5px solid white;
+  }
+  .offline {
+    background-color: #ee9b00 !important;
+  }
+  
+  
+
+  .chat-box .chat-block .details{
+    position: relative;
+    width: 100%;
+   
+  }
+  .chat-box .chat-block .details .listHead{
+    display: flex;
+    justify-content: space-between;
+
+ 
+  }
+
+  .chat-box .chat-block .details .listHead h4{
+    font-size: 1em;
+    font-weight: 550;
+   
+    line-height: 0.70px;
+
+  }
+  .chat-box .chat-block .details .listHead .time{
+    font-size: 0.75em;
+    line-height: 0.70px;
+
+  }
+  .message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   
+  }
+  .message p{
+    display: -webkit-box;
+  line-height: 18px;
+    -webkit-line-clamp: 1;
+    font-size: 0.9em;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+  .message b{
+    background: rgb(238, 91, 91);
+    line-height: 18px;
+    color: #fff;
+    min-width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.55em;
+    margin-bottom: 12px;
+  }
+ .chat-block:hover{
+    background: #303841;
+  }
+  .chat-box{
+    height: whatever px;
+
+  overflow-y: auto;
+  }
+ 
+   .chat-box:hover{
+    overflow-y: scroll;
+    margin-right: -15px;
+   
+  } 
+  
