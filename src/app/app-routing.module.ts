@@ -5,6 +5,7 @@ import { ChatPageComponent } from './components/side-components/chat-page/chat-p
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/side-components/profile/profile.component';
+import { GroupsComponent } from './components/side-components/groups/groups.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
     children: [
       { path: 'profile', component: ProfileComponent },
       { path: 'chat', component: ChatPageComponent },
+      { path: 'groups', component: GroupsComponent },
     ],
   },
   { path: 'register', component: RegisterComponent },
