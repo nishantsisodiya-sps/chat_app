@@ -1,0 +1,136 @@
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Public+Sans:wght@200&display=swap');
+
+@media (min-width: 992px) {
+    .groups-page {
+        min-width: 380px;
+        max-width: 380px;
+    }
+}
+
+@media (min-width: 992px) {
+    .me-lg-1 {
+        margin-right: 0.25rem !important;
+    }
+}
+
+.groups-page {
+    height: 100vh;
+    background-color: var(--bs-sidebar-sub-bg);
+}
+
+.group-title {
+    font-size: 1.4em;
+    font-weight: bolder;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.Search input {
+    background: #303841;
+    border-radius: 2px;
+    border: transparent;
+    height: 2.5rem;
+
+    width: 100%;
+    padding: 22px 16px 22px 48px;
+    color: white;
+}
+
+.Search {
+    position: relative;
+}
+
+.Search input::placeholder {
+    color: #8d99ae;
+}
+
+.Search i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: #8d99ae;
+    font-size: 17px;
+    pointer-events: none;
+    margin-right: 10rem;
+    transform: translateY(-50%);
+}
+
+.Search .form-control:focus {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.group-box {
+    position: relative;
+    overflow-y: auto;
+    height: calc(100% - 110px);
+    margin-top: 4em;
+}
+
+.group-box .group-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 2px 35px 0px 40px;
+  
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.group-box .group-block .imgbx {
+    position: relative;
+    width: 45px;
+    height: 37px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
+   
+    background-color: #5e548e;
+    border-radius: 50%;
+}
+
+.group-name {
+    position: absolute;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 50%;
+    color: #9f86c0;
+    margin-left: 0.7em;
+    margin-top: 0.32em;
+}
+
+.group-box .group-block .details {
+    position: relative;
+    width: 100%;
+}
+
+.group-box .group-block .details .listHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-box .group-block .details .listHead h4 {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 0.5em;
+
+    line-height: 0.7px;
+}
+
+.group-box .group-block .details .listHead .notification {
+
+    background: rgb(85, 77, 77);
+    line-height: 0.7px;
+    padding: 8px 5px 8px 4px;
+    color: rgb(231, 79, 79);
+    text-shadow: 0px 0px 2px red, 0px 0px 1px red;
+
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.70em;
+}
