@@ -33,6 +33,7 @@
   background-color: #262e35;
   padding: 8%;
   border-radius: 5px;
+  width: 100%;
 }
 
 h4 {
@@ -239,7 +240,6 @@ p {
     width: 66.66666667%;
   }
 }
-
 
 @media (max-width: 576px) {
   .col-md-8 {

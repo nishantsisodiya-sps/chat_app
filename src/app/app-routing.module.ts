@@ -16,6 +16,7 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     children: [
+      { path: '', redirectTo: 'chat', pathMatch: 'full' },
       { path: 'profile', component: ProfileComponent },
       { path: 'chat', component: ChatPageComponent },
       { path: 'groups', component: GroupsComponent },
