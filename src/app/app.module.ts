@@ -19,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GroupsComponent } from './components/side-components/groups/groups.component';
 import { ContactsComponent } from './components/side-components/contacts/contacts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SettingsComponent } from './components/side-components/settings/settings.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -34,6 +35,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ProfileComponent,
     GroupsComponent,
     ContactsComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,

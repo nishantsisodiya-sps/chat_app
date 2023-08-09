@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/side-components/profile/profile.component';
 import { GroupsComponent } from './components/side-components/groups/groups.component';
 import { ContactsComponent } from './components/side-components/contacts/contacts.component';
+import { SettingsComponent } from './components/side-components/settings/settings.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'chat', component: ChatPageComponent },
       { path: 'groups', component: GroupsComponent },
       { path: 'contacts', component: ContactsComponent },
+      { path: 'settings', component: SettingsComponent },
     ],
   },
 ];
