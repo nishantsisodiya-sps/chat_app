@@ -2,145 +2,211 @@
   <div class="px-4 pt-4">
     <div class="user-chat-nav float-end">
       <div class="dropdown">
-        <a
-          _ngcontent-wyq-c114=""
-          href="javascript: void(0);"
-          ngbdropdowntoggle=""
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          class="dropdown-toggle font-size-18 text-muted"
-        >
+        <a _ngcontent-wyq-c114="" href="javascript: void(0);" ngbdropdowntoggle="" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" class="dropdown-toggle font-size-18 text-muted">
           <i _ngcontent-wyq-c114="" class="ri-more-2-fill"></i>
         </a>
 
-        <div
-          _ngcontent-wyq-c114=""
-          ngbdropdownmenu=""
-          class="dropdown-menu dropdown-menu-right"
-        >
-          <a
-            _ngcontent-wyq-c114=""
-            href="javascript:void(0);"
-            class="dropdown-item"
-            >Edit</a
-          >
-          <a
-            _ngcontent-wyq-c114=""
-            href="javascript:void(0);"
-            class="dropdown-item"
-            >Action</a
-          >
+        <div _ngcontent-wyq-c114="" ngbdropdownmenu="" class="dropdown-menu dropdown-menu-right">
+          <a _ngcontent-wyq-c114="" href="javascript:void(0);" class="dropdown-item">Edit</a>
+          <a _ngcontent-wyq-c114="" href="javascript:void(0);" class="dropdown-item">Action</a>
           <div _ngcontent-wyq-c114="" class="dropdown-divider"></div>
-          <a
-            _ngcontent-wyq-c114=""
-            href="javascript:void(0);"
-            class="dropdown-item"
-            >Another action</a
-          >
+          <a _ngcontent-wyq-c114="" href="javascript:void(0);" class="dropdown-item">Another action</a>
         </div>
       </div>
     </div>
     <h4 _ngcontent-hly-c114="" class="mb-0">My Profile</h4>
   </div>
 
-  <div class="text-center p-4 border-bottom">
+  <div class="text-center p-4 ">
     <div class="mb-4">
-      <img
-        alt=""
-        class="rounded-circle avatar-lg img-thumbnail"
-        src="../../../../assets/profile.png"
-      />
+      <img alt="" class="rounded-circle avatar-lg img-thumbnail" src="../../../../assets/profile.png" />
     </div>
-    <h5 class="font-size-16 mb-1 text-truncate">Admin</h5>
+    <h5 class="font-size-12 mb-1 text-truncate">admin</h5>
     <p class="text-truncate mb-1">
-      <i
-        class="ri-record-circle-fill font-size-10 text-success me-1 d-inline-block"
-      >
+      <i class="ri-record-circle-fill font-size-10 text-success me-1 d-inline-block">
       </i>
       Active
     </p>
+    <div class="border-line"></div>
   </div>
 
-  <perfect-scrollbar class="p-4 user-profile-desc">
+  <perfect-scrollbar class="px-4 pb-4 user-profile-desc">
     <div style="position: static" class="ps ps--active-y">
       <div class="ps-content">
         <div class="text-muted">
-          <p class="mb-4" style="color: white">
+          <p class="mb-4" style="  color: #8d99ae;">
             If several languages coalesce, the grammar of the resulting language
             is more simple and regular than that of the individual.
           </p>
         </div>
-        <ngb-accordion
-          role="tablist"
-          activeids="about"
-          class="accordion"
-          ng-reflect-active-ids="about"
-          ng-reflect-close-other-panels="true"
-          aria-multiselectable="false"
-        >
-          <div class="accordion-item border card mb-2 shadow-none">
-            <div role="tab" class="accordion-header" id="about-header">
-              <button
-                type="button"
-                class="accordion-button"
-                ng-reflect-ngb-panel-toggle="[object Object]"
-                aria-expanded="true"
-                aria-controls="about"
-              >
-                <h5 class="font-size-14 m-0">
-                  <i class="ri-user-2-line me-2 align-middle d-inline-block">
-                  </i>
-                  About
-                </h5>
-              </button>
-            </div>
-            <div
-              role="tabpanel"
-              id="about"
-              aria-labelledby="about-header"
-              class="collapse show"
-            >
-              <div class="accordion-body">
-                <div>
-                  <p class="text-muted mb-1">Name</p>
-                  <h5 class="font-size-14">admin</h5>
-                </div>
-                <div class="mt-4">
-                  <p class="text-muted mb-1">Email</p>
-                  <h5 class="font-size-14">abc@123.com</h5>
-                </div>
-                <div class="mt-4">
-                  <p class="text-muted mb-1">Time</p>
-                  <h5 class="font-size-14">11:40 AM</h5>
-                </div>
-                <div class="mt-4">
-                  <p class="text-muted mb-1">Location</p>
-                  <h5 class="font-size-14 mb-0">California, USA</h5>
+
+
+        <div class="profile-box">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  <i class="fa-regular fa-user pe-3" style="color:white ;"></i> About
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="container">
+                    <div class="profile-name mt-3">
+                      <h6>Name</h6>
+                      <span>admin</span>
+                    </div>
+                    <div class="profile-email mt-4">
+                      <h6>Email</h6>
+                      <span>abc@123.com</span>
+                    </div>
+                    <div class="profile-time mt-4">
+                      <h6>Time</h6>
+                      <span>11:40 AM</span>
+                    </div>
+                    <div class="profile-location mt-4">
+                      <h6>location</h6>
+                      <span>California, USA</span>
+                    </div>
+
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="accordion-item border card mb-2 shadow-none">
-            <div role="tab" class="accordion-header" id="file-header">
-              <button
-                type="button"
-                class="accordion-button collapsed"
-                ng-reflect-ngb-panel-toggle="[object Object]"
-                aria-expanded="false"
-                aria-controls="file"
-              >
-                <h5 class="font-size-14 m-0">
-                  <i
-                    class="ri-attachment-line me-2 align-middle d-inline-block"
-                  >
-                  </i>
-                  Attached Files
-                </h5>
-              </button>
+            <div class="accordion-item mt-3 mb-5">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <i class="ri-attachment-line pe-3" style="color:white ;"></i> Attached Files
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="container-box mt-2">
+                    <div class=" navbar  files-box">
+                      <div class="box navbar">
+                        <div class="image-box">
+                          <i class="fas fa-images"></i>
+                        </div>
+
+
+                        <div class="field ms-3">
+                          <h6>
+                            Admin-A.zip
+
+                          </h6>
+                          <p>12.5 MB</p>
+                        </div>
+                      </div>
+
+
+
+                      <div class="link">
+                        <i class="ri-download-2-line me-3" style="color: wheat;"></i>
+                        <i class="ri-more-fill" style="color: white;"></i>
+                      </div>
+
+
+                    </div>
+                    <div class=" navbar mt-2 files-box">
+                      <div class="box navbar">
+                        <div class="image-box">
+                          <i class="fas fa-images"></i>
+                        </div>
+
+
+                        <div class="field ms-3">
+                          <h6>
+                            Image-1.jpg
+
+                          </h6>
+                          <p>4.2 MB</p>
+                        </div>
+                      </div>
+
+
+
+                      <div class="link">
+                        <i class="ri-download-2-line me-3" style="color: wheat;"></i>
+                        <i class="ri-more-fill" style="color: white;"></i>
+                      </div>
+
+
+                    </div>
+                    <div class=" navbar  files-box mt-2">
+                      <div class="box navbar">
+                        <div class="image-box">
+                          <i class="fas fa-images"></i>
+                        </div>
+
+
+                        <div class="field ms-3">
+                          <h6>
+                            Image-2.jpg
+
+                          </h6>
+                          <p>3.1 MB</p>
+                        </div>
+                      </div>
+
+
+
+                      <div class="link">
+                        <i class="ri-download-2-line me-3" style="color: wheat;"></i>
+                        <i class="ri-more-fill" style="color: white;"></i>
+                      </div>
+
+
+                    </div>
+                    <div class=" navbar  files-box mt-2">
+                      <div class="box navbar">
+                        <div class="image-box">
+                          <i class="fas fa-images"></i>
+                        </div>
+
+
+                        <div class="field ms-3">
+                          <h6>
+                            Landing-A.zip
+
+                          </h6>
+                          <p>6.7 MB</p>
+                        </div>
+                      </div>
+
+
+
+                      <div class="link">
+                        <i class="ri-download-2-line me-3" style="color: wheat;"></i>
+                        <i class="ri-more-fill" style="color: white;"></i>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
-        </ngb-accordion>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
       <div class="ps__rail-x" style="left: 0px; bottom: 0px"></div>
     </div>
