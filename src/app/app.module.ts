@@ -20,6 +20,7 @@ import { GroupsComponent } from './components/side-components/groups/groups.comp
 import { ContactsComponent } from './components/side-components/contacts/contacts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SettingsComponent } from './components/side-components/settings/settings.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -47,6 +48,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     NgbModule,
     HttpClientModule,
+    MatSnackBarModule,
   ],
   providers: [
     {

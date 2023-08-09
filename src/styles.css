@@ -9,13 +9,22 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-
-
-i{
+i {
   color: #a6b0cf;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #e1e9f1;
   font-family: "Public Sans", sans-serif;
   font-weight: 600;
@@ -24,4 +33,11 @@ i{
 .text-muted {
   --bs-text-opacity: 1;
   color: #9aa1b9;
+}
+
+.my-custom-snackbar {
+  margin: 0 !important;
+  position: absolute;
+  right: 25px;
+  top: 20px;
 }
