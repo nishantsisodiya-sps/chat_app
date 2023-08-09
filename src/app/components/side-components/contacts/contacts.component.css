@@ -1,0 +1,88 @@
+@media (min-width: 992px) {
+    .contact-page {
+        min-width: 380px;
+        max-width: 380px;
+    }
+}
+
+@media (min-width: 992px) {
+    .me-lg-1 {
+        margin-right: 0.25rem !important;
+    }
+}
+
+.contact-page {
+    height: 100vh;
+    background-color: var(--bs-sidebar-sub-bg);
+}
+
+.contact-title {
+    font-size: 1.4em;
+    font-weight: bolder;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.Search input {
+    background: #303841;
+    border-radius: 2px;
+    border: transparent;
+    height: 2.5rem;
+
+    width: 100%;
+    padding: 22px 16px 22px 48px;
+    color: white;
+}
+
+.Search {
+    position: relative;
+}
+
+.Search input::placeholder {
+    color: #8d99ae;
+}
+
+.Search i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: #8d99ae;
+    font-size: 17px;
+    pointer-events: none;
+    margin-right: 10rem;
+    transform: translateY(-50%);
+}
+
+.Search .form-control:focus {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.contact-box {
+    position: relative;
+    overflow-y: auto;
+    height: calc(100% - 110px);
+    margin-top: 3em;
+}
+
+.contact-box .contact-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 10px 35px 0px 40px;
+
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.contact-block h4 {
+    font-size: 1em;
+    color: #5e548e;
+
+}
+
+.navbar h6 {
+    font-size: 0.9em;
+    cursor: pointer;
+}
