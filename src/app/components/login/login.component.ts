@@ -36,30 +36,33 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit() {
-    let data = this.loginForm.value;
-    this.http
-      .post<{ success: boolean; token: string; message: string }>(
-        'http://localhost:9001/user/auth/login',
-        { email: data.email, password: data.password }
-      )
-      .subscribe(
-        (response) => {
-          if (response.success) {
-            localStorage.setItem('token', response.token);
-            this._snackBar.open(response.message, 'Close', {
-              panelClass: 'my-custom-snackbar',
-              duration: 3000,
-            });
-            this.router.navigate(['/home']);
-          }
-        },
-        (error) => {
-          this._snackBar.open(error.error.message, 'Close', {
-            duration: 3000,
-            panelClass: 'my-custom-snackbar',
-          });
-        }
-      );
+  // onSubmit() {
+  //   let data = this.loginForm.value;
+  //   this.http
+  //     .post<{ success: boolean; token: string; message: string }>(
+  //       'http://localhost:9001/user/auth/login',
+  //       { email: data.email, password: data.password }
+  //     )
+  //     .subscribe(
+  //       (response) => {
+  //         if (response.success) {
+  //           localStorage.setItem('token', response.token);
+  //           this._snackBar.open(response.message, 'Close', {
+  //             panelClass: 'my-custom-snackbar',
+  //             duration: 3000,
+  //           });
+  //           this.router.navigate(['/home']);
+  //         }
+  //       },
+  //       (error) => {
+  //         this._snackBar.open(error.error.message, 'Close', {
+  //           duration: 3000,
+  //           panelClass: 'my-custom-snackbar',
+  //         });
+  //       }
+      // );
+      onSubmit(){
+        this.router.navigate(['/home'])
+      }
   }
-}
+// }

@@ -1,1 +1,235 @@
-<p>settings works!</p>
+<div class="setting-page me-lg-1">
+  <div class="container">
+    <div class="px-4 pt-4">
+      <div class="navbar navbar-light">
+        <h3 class="setting-title">Settings</h3>
+      </div>
+
+      <div class="text-center p-4 ">
+        <div class="mb-4 ">
+          <img alt="" class="rounded-circle avatar-lg img-thumbnail" src="../../../../assets/profile.png" />
+          <span class="img-box">
+            <label class="images-btn">
+              <input type="file" name="image" accept="image/gif,image/jpeg,image/jpg,image/png" multiple=""
+                data-original-title="upload photos" style="display: none;">
+              <i class="fas fa-pen"></i>
+            </label>
+          </span>
+        </div>
+        <h6 class="font-size-12 ">
+          admin
+        </h6>
+
+        <div class="dropdown ">
+          <button class="btn    dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Available <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu mt-1  " aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Available</a></li>
+            <li><a class="dropdown-item" href="#">Busy</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="border-line "></div>
+
+    <perfect-scrollbar class="px-4 pb-4 pt-3 user-profile-desc">
+      <div style="position: static" class="ps ps--active-y">
+
+        <div class="setting-box">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  Personal Info
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="container">
+                    <div class="navbar">
+                      <div class="profile-name mt-3">
+                        <h6>Name</h6>
+                        <span>admin</span>
+                      </div>
+                      <button class="btn edit-btn
+                            " type="submit"><i class="fas fa-edit me-2"
+                          style="color: white; font-size: 0.8em;"></i>Edit</button>
+                    </div>
+
+                    <div class="profile-email mt-4">
+                      <h6>Email</h6>
+                      <span>abc@123.com</span>
+                    </div>
+                    <div class="profile-time mt-4">
+                      <h6>Time</h6>
+                      <span>11:40 AM</span>
+                    </div>
+                    <div class="profile-location mt-4">
+                      <h6>location</h6>
+                      <span>California, USA</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item  mt-2">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Privacy
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="container-box">
+                    <div class="privacy-box">
+                      <div class="details  ">
+                        <div class="navbar">
+                          <h6>Profile photo</h6>
+                          <div class="dropdown mb-2 ">
+                            <button class="btn  " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              Everyone<i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu   mt-1 " data-popper-placement="bottom-start"
+                              aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Everyone</a></li>
+                              <li><a class="dropdown-item" href="#">Selected</a></li>
+                              <li><a class="dropdown-item" href="#">Nobody</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="details">
+                      <div class="navbar pt-4 pb-3">
+                        <h6>Last seen</h6>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="details">
+                      <div class="navbar pt-3">
+                        <h6>Status</h6>
+                        <div class="dropdown mb-2 ">
+                          <button class="btn " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Everyone <i class="fas fa-chevron-down"></i>
+                          </button>
+                          <ul class="dropdown-menu  dropstart mt-1 " data-popper-placement="bottom-start"
+                            aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Everyone</a></li>
+                            <li><a class="dropdown-item" href="#">Selected</a></li>
+                            <li><a class="dropdown-item" href="#">Nobody</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="details">
+                      <div class="navbar pt-4 pb-3">
+                        <h6>Read receipts</h6>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="navbar pt-3 ">
+                      <h6>Groups</h6>
+                      <div class="dropdown mb-2 ">
+                        <button class="btn  " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Everyone <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu  dropstart mt-1 " data-popper-placement="bottom-start"
+                          aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Everyone</a></li>
+                          <li><a class="dropdown-item" href="#">Selected</a></li>
+                          <li><a class="dropdown-item" href="#">Nobody</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-2">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Security
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="container-box">
+                    <div class="setting-box">
+                      <div class="navbar">
+                        <h6>Show security notification</h6>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-2 mb-5">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Help
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="container-box">
+                    <div class="help-box mt-3 ">
+                      <div class="details">
+                        <div class="navbar">
+                          <h6>FAQs</h6>
+                        </div>
+                      </div>
+                      <div class="details">
+                        <div class="navbar pt-3">
+                          <h6>Contact</h6>
+                        </div>
+                      </div>
+                      <div class="navbar pt-3">
+                        <h6>Terms & Privacy policy</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ps__rail-x" style="left: 0px; bottom: 0px"></div>
+      </div>
+    </perfect-scrollbar>
+
+  </div>
+</div>
