@@ -21,6 +21,10 @@ import { ContactsComponent } from './components/side-components/contacts/contact
 import { HttpClientModule } from '@angular/common/http';
 import { SettingsComponent } from './components/side-components/settings/settings.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AddGroupComponent } from './components/side-components/groups/add-group/add-group.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { GetFirstLetterPipe } from './utils/get-first-letter.pipe';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -37,6 +41,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     GroupsComponent,
     ContactsComponent,
     SettingsComponent,
+    AddGroupComponent,
+    GetFirstLetterPipe,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +55,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NgbModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatDialogModule,
+    MatFormFieldModule
   ],
   providers: [
     {

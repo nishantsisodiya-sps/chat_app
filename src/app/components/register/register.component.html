@@ -77,7 +77,20 @@
                     class="inputclass form-control bg-soft-light border-light ng-valid ng-dirty ng-touched"
                     formControlName="password"
                     placeholder="Enter your Password"
+                    #SignupPasswordInput
                   />
+                  <span class="eyePass">
+                    <i
+                    class="fa fa-eye"
+                    *ngIf="showPass"
+                    (click)="togglePassword(SignupPasswordInput)"
+                  ></i>
+                  <i
+                    class="fa fa-eye-slash"
+                    *ngIf="!showPass"
+                    (click)="togglePassword(SignupPasswordInput)"
+                  ></i>
+                  </span>
                 </div>
               </div>
 

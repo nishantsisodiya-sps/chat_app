@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddGroupComponent } from './add-group/add-group.component';
+import { GroupService } from 'src/app/services/group.service';
+import { TokenService } from 'src/app/services/token.service';
+import { group } from 'src/app/interfaces/groupsInterface';
+import { GetFirstLetterPipe } from 'src/app/utils/get-first-letter.pipe';
 
 @Component({
   selector: 'app-groups',
@@ -7,9 +13,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GroupsComponent implements OnInit {
 
-  constructor() { }
+  groups : group[] = []
+
+  constructor(
+    public dialog: MatDialog,
+    private group : GroupService,
+    private token : TokenService
+    ) { }
 
   ngOnInit(): void {
+    this.GetGroups()
   }
+
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddGroupComponent, {
+     
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    
+    });
+  }
+
+
+  GetGroups(){
+    let id = this.token.getUserId().id
+    this.group.GetAllGroups(id).subscribe(res=>{
+      this.groups = res
+    })
+  }
+
 
 }

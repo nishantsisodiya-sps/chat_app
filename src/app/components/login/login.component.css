@@ -62,7 +62,7 @@ h4 {
   border-color: #353e48 !important;
 }
 .inputclass {
-  height: 30px;
+  height: 32px;
   background-color: #303841;
   color: white;
 }
@@ -103,7 +103,6 @@ h4 {
   display: block;
   font-weight: 400;
   line-height: 1.5;
-  /* color: var(--bs-body-color); */
   background-clip: padding-box;
   border: 1px solid var(--bs-input-border-color);
   -webkit-appearance: none;
@@ -250,4 +249,11 @@ p {
 .form-check-input:checked {
   background-color: #3f51b5;
   border-color: #3f51b5;
+}
+.eyePass{
+  position: absolute;
+  right: 0.5rem;
+  top: 0.3em;
+  cursor: pointer;
+  z-index: 1000;
 }

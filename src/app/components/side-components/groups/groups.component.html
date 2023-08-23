@@ -5,7 +5,7 @@
         <h3 class="group-title">Groups</h3>
         <div class="mb-2">
           <!-- <i class="fas fa-user-friends"></i> -->
-          <i class="ri-group-line" style="font-size: 1.2em"></i>
+          <i class="ri-group-line" style="font-size: 1.2em; cursor: pointer;" (click)="openDialog()"></i>
         </div>
       </div>
       <div class="Search">
@@ -18,71 +18,14 @@
         <i class="fas fa-search"></i>
       </div>
     </div>
-    <div class="group-box">
-      
+    <div class="group-box" *ngFor="let item of groups">
       <div class="group-block">
         <div class="imgbx">
-          <span class="group-name shadow">G</span>
+          <span class="group-name shadow">{{item.name | firstWord | uppercase }}</span>
         </div>
         <div class="details">
           <div class="listHead">
-            <h4>#General</h4>
-           
-          </div>
-        </div>
-      </div>
-      <div class="group-block">
-        <div class="imgbx">
-          <span class="group-name shadow">R</span>
-        </div>
-        <div class="details">
-          <div class="listHead">
-            <h4>#Reporting</h4>
-            <p class="notification">+23</p>
-          </div>
-        </div>
-      </div>
-      <div class="group-block">
-        <div class="imgbx">
-          <span class="group-name shadow">D</span>
-        </div>
-        <div class="details">
-          <div class="listHead">
-            <h4>#Designers</h4>
-            
-          </div>
-        </div>
-      </div>
-      <div class="group-block">
-        <div class="imgbx">
-            <span class="group-name shadow">D</span>
-        </div>
-        <div class="details">
-          <div class="listHead">
-            <h4>#Developers</h4>
-            <p class="notification">New</p>
-          </div>
-        </div>
-      </div>
-      <div class="group-block">
-        <div class="imgbx">
-          <span class="group-name shadow">P</span>
-        </div>
-        <div class="details">
-          <div class="listHead">
-            <h4>#Project-alpha</h4>
-     
-          </div>
-        </div>
-      </div>
-      <div class="group-block">
-        <div class="imgbx">
-          <span class="group-name shadow">S</span>
-        </div>
-        <div class="details">
-          <div class="listHead">
-            <h4>#Snacks</h4>
-      
+            <h4>#{{item.name}}</h4>
           </div>
         </div>
       </div>

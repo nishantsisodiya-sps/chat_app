@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
@@ -11,12 +11,16 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
+  showPass : boolean = true
+
+  @ViewChild('loginPasswordInput', { static: false }) loginPasswordInput: ElementRef<HTMLInputElement> | undefined;
 
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    private renderer: Renderer2,
   ) {
     this.registerForm = formBuilder.group({
       username: ['', [Validators.required]],
@@ -53,11 +57,19 @@ export class RegisterComponent implements OnInit {
           }
         },
         (error) => {
+          console.log(error);
           this._snackBar.open(error.error.message, 'Close', {
             duration: 3000,
             panelClass: 'my-custom-snackbar',
           });
         }
       );
+  }
+
+
+  togglePassword(passwordInput: HTMLInputElement): void {
+    const type = this.showPass ? 'password' : 'text';
+    this.renderer.setProperty(passwordInput, 'type', type);
+    this.showPass = !this.showPass;
   }
 }
