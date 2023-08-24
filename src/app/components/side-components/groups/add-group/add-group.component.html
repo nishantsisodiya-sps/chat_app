@@ -14,6 +14,7 @@
         data-dismiss="modal"
         aria-label="Close"
         class="btn-close"
+        (click)="onNoClick()"
       ></button>
     </div>
     <div _ngcontent-elo-c125="" class="modal-body p-4">
@@ -21,6 +22,8 @@
         _ngcontent-elo-c125=""
         novalidate=""
         class="ng-untouched ng-pristine ng-valid"
+        [formGroup]="MyGroupForm"
+        
       >
         <div _ngcontent-elo-c125="" class="mb-4">
           <label
@@ -34,27 +37,26 @@
             id="addgroupname-input"
             class="form-control"
             placeholder="Enter Group Name"
+            formControlName = 'name'
           />
         </div>
         <div _ngcontent-elo-c125="" class="mb-4">
           <label _ngcontent-elo-c125="" class="form-label">Group Members</label>
           <div _ngcontent-elo-c125="" class="mb-3">
             <button
-              _ngcontent-elo-c125=""
-              type="button"
-              data-toggle="collapse"
-              aria-controls="collapseExample"
-              class="btn btn-light btn-sm"
-              aria-expanded="false"
+            _ngcontent-elo-c125=""
+            type="button"
+            (click)="toggleCollapse()"
+            class="btn btn-light btn-sm"
+            aria-expanded="false"
             >
               Select Members
             </button>
           </div>
           <div
-            _ngcontent-elo-c125=""
-            id="groupmembercollapse"
-            class="collapse"
-            ng-reflect-collapsed="true"
+          _ngcontent-elo-c125=""
+          id="groupmembercollapse"
+          [ngClass]="{ collapse: !isCollapsed, show: isCollapsed }"
           >
             <div _ngcontent-elo-c125="" class="card border">
               <div _ngcontent-elo-c125="" class="card-header">
@@ -74,322 +76,33 @@
                   >
                     <div class="ps-content">
                       <div _ngcontent-elo-c125="">
-                        <div
+                        <!-- <div
                           _ngcontent-elo-c125=""
                           class="p-3 font-weight-bold text-primary"
                         >
                           A
-                        </div>
-                        <ul
-                          _ngcontent-elo-c125=""
-                          class="list-unstyled contact-list"
-                        >
-                          <li _ngcontent-elo-c125="">
+                        </div> -->
+                        <ul _ngcontent-elo-c125="" class="list-unstyled contact-list">
+                          <li _ngcontent-elo-c125="" *ngFor="let item of allmembers">
                             <div _ngcontent-elo-c125="" class="form-check">
                               <input
                                 _ngcontent-elo-c125=""
                                 type="checkbox"
-                                id="memberCheck1"
-                                checked=""
+                                [id]="'memberCheck' + item"
                                 class="form-check-input"
-                              /><label
+                                (change)="toggleMemberSelection(item)"
+                                [checked]="isSelected(item)"
+                              />
+                              <label
                                 _ngcontent-elo-c125=""
-                                for="memberCheck1"
+                                [for]="'memberCheck' + item"
                                 class="form-check-label"
-                                >Albert Rodarte</label
-                              >
-                            </div>
-                          </li>
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck2"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck2"
-                                class="form-check-label"
-                                >Allison Etter</label
+                                >{{ item }}</label
                               >
                             </div>
                           </li>
                         </ul>
-                      </div>
-                      <div _ngcontent-elo-c125="">
-                        <div
-                          _ngcontent-elo-c125=""
-                          class="p-3 font-weight-bold text-primary"
-                        >
-                          C
-                        </div>
-                        <ul
-                          _ngcontent-elo-c125=""
-                          class="list-unstyled contact-list"
-                        >
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck3"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck3"
-                                class="form-check-label"
-                              >
-                                Craig Smiley</label
-                              >
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div _ngcontent-elo-c125="">
-                        <div
-                          _ngcontent-elo-c125=""
-                          class="p-3 font-weight-bold text-primary"
-                        >
-                          D
-                        </div>
-                        <ul
-                          _ngcontent-elo-c125=""
-                          class="list-unstyled contact-list"
-                        >
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck4"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck4"
-                                class="form-check-label"
-                              >
-                                Daniel Clay</label
-                              >
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div _ngcontent-elo-c125="">
-                        <div
-                          _ngcontent-elo-c125=""
-                          class="p-3 font-weight-bold text-primary"
-                        >
-                          I
-                        </div>
-                        <ul
-                          _ngcontent-elo-c125=""
-                          class="list-unstyled contact-list"
-                        >
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck5"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck5"
-                                class="form-check-label"
-                              >
-                                Iris Wells</label
-                              >
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div _ngcontent-elo-c125="">
-                        <div
-                          _ngcontent-elo-c125=""
-                          class="p-3 font-weight-bold text-primary"
-                        >
-                          J
-                        </div>
-                        <ul
-                          _ngcontent-elo-c125=""
-                          class="list-unstyled contact-list"
-                        >
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck6"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck6"
-                                class="form-check-label"
-                                >Juan Flakes</label
-                              >
-                            </div>
-                          </li>
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck7"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck7"
-                                class="form-check-label"
-                                >John Hall</label
-                              >
-                            </div>
-                          </li>
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck8"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck8"
-                                class="form-check-label"
-                                >Joy Southern</label
-                              >
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div _ngcontent-elo-c125="">
-                        <div
-                          _ngcontent-elo-c125=""
-                          class="p-3 font-weight-bold text-primary"
-                        >
-                          M
-                        </div>
-                        <ul
-                          _ngcontent-elo-c125=""
-                          class="list-unstyled contact-list"
-                        >
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck9"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck9"
-                                class="form-check-label"
-                                >Mary Farmer</label
-                              >
-                            </div>
-                          </li>
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck10"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck10"
-                                class="form-check-label"
-                                >Mark Messer</label
-                              >
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div _ngcontent-elo-c125="">
-                        <div
-                          _ngcontent-elo-c125=""
-                          class="p-3 font-weight-bold text-primary"
-                        >
-                          P
-                        </div>
-                        <ul
-                          _ngcontent-elo-c125=""
-                          class="list-unstyled contact-list"
-                        >
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck11"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck11"
-                                class="form-check-label"
-                              >
-                                Phillis Griffin</label
-                              >
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div _ngcontent-elo-c125="">
-                        <div
-                          _ngcontent-elo-c125=""
-                          class="p-3 font-weight-bold text-primary"
-                        >
-                          R
-                        </div>
-                        <ul
-                          _ngcontent-elo-c125=""
-                          class="list-unstyled contact-list"
-                        >
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck12"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck12"
-                                class="form-check-label"
-                              >
-                                Rocky Jackson</label
-                              >
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div _ngcontent-elo-c125="">
-                        <div
-                          _ngcontent-elo-c125=""
-                          class="p-3 font-weight-bold text-primary"
-                        >
-                          S
-                        </div>
-                        <ul
-                          _ngcontent-elo-c125=""
-                          class="list-unstyled contact-list"
-                        >
-                          <li _ngcontent-elo-c125="">
-                            <div _ngcontent-elo-c125="" class="form-check">
-                              <input
-                                _ngcontent-elo-c125=""
-                                type="checkbox"
-                                id="memberCheck13"
-                                class="form-check-input"
-                              /><label
-                                _ngcontent-elo-c125=""
-                                for="memberCheck13"
-                                class="form-check-label"
-                                >Sara Muller</label
-                              >
-                            </div>
-                          </li>
-                        </ul>
+                        
                       </div>
                     </div>
                     <!--bindings={
@@ -426,6 +139,7 @@
             rows="3"
             class="form-control"
             placeholder="Enter description"
+            formControlName = "description"
           ></textarea>
         </div>
       </form>
@@ -436,9 +150,10 @@
         type="button"
         data-dismiss="modal"
         class="btn btn-link"
+        (click)="onNoClick()"
       >
         Close</button
-      ><button _ngcontent-elo-c125="" type="button" class="btn btn-primary">
+      ><button _ngcontent-elo-c125="" type="submit" class="btn btn-primary" (click)="createGroup()">
         Create Groups
       </button>
     </div>

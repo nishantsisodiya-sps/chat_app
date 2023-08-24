@@ -21,14 +21,16 @@
     <div class="group-box" *ngFor="let item of groups">
       <div class="group-block">
         <div class="imgbx">
-          <span class="group-name shadow">{{item.name | firstWord | uppercase }}</span>
+          <span class="group-name shadow" *ngIf="!item.profilePicture">{{ item.name | firstWord | uppercase }}</span>
+          <img src="{{ item.profilePicture }}" alt="">
         </div>
         <div class="details">
           <div class="listHead">
-            <h4>#{{item.name}}</h4>
+            <h4>#{{ item.name }}</h4>
           </div>
         </div>
       </div>
     </div>
+    
   </div>
 </div>

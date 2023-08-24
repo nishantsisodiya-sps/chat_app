@@ -25,6 +25,7 @@ import { AddGroupComponent } from './components/side-components/groups/add-group
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { GetFirstLetterPipe } from './utils/get-first-letter.pipe';
+import { AddContactsComponent } from './components/side-components/contacts/add-contacts/add-contacts.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -43,6 +44,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SettingsComponent,
     AddGroupComponent,
     GetFirstLetterPipe,
+    AddContactsComponent,
   ],
   imports: [
     BrowserModule,

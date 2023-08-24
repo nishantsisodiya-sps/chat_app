@@ -22,23 +22,24 @@ export class GroupsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.GetGroups()
+    this.getGroups()
   }
 
 
   openDialog(): void {
     const dialogRef = this.dialog.open(AddGroupComponent, {
-     
+      width: '500px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    
+      if (result) {
+        this.getGroups();
+      }
     });
   }
 
 
-  GetGroups(){
+  getGroups(){
     let id = this.token.getUserId().id
     this.group.GetAllGroups(id).subscribe(res=>{
       this.groups = res

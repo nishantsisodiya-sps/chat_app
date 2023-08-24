@@ -6,3 +6,10 @@ export interface group {
     createdBy : string,
     createdAt : Date
 }
+
+
+export interface createGroup {
+    name : String;
+    members : [],
+    description : string
+}

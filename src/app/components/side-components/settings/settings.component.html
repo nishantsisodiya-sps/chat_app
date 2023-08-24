@@ -1,5 +1,5 @@
 <div class="setting-page me-lg-1">
-  <div class="container">
+  <div class="container" *ngFor="let item of profileData">
     <div class="px-4 pt-4">
       <div class="navbar navbar-light">
         <h3 class="setting-title">Settings</h3>
@@ -7,7 +7,7 @@
 
       <div class="text-center p-4 ">
         <div class="mb-4 ">
-          <img alt="" class="rounded-circle avatar-lg img-thumbnail" src="../../../../assets/profile.png" />
+          <img alt="" class="rounded-circle avatar-lg img-thumbnail" src="{{item.profilePicture}}" />
           <span class="img-box">
             <label class="images-btn">
               <input type="file" name="image" accept="image/gif,image/jpeg,image/jpg,image/png" multiple=""
@@ -17,7 +17,7 @@
           </span>
         </div>
         <h6 class="font-size-12 ">
-          admin
+          {{item.name}}
         </h6>
 
         <div class="dropdown ">
@@ -56,8 +56,8 @@
                   <div class="container">
                     <div class="navbar">
                       <div class="profile-name mt-3">
-                        <h6>Name</h6>
-                        <span>admin</span>
+                        <h6>Name : </h6>
+                        <span>{{item.name}}</span>
                       </div>
                       <button class="btn edit-btn
                             " type="submit"><i class="fas fa-edit me-2"
@@ -65,16 +65,16 @@
                     </div>
 
                     <div class="profile-email mt-4">
-                      <h6>Email</h6>
-                      <span>abc@123.com</span>
+                      <h6>Email : </h6>
+                      <span>{{item.email}}</span>
                     </div>
                     <div class="profile-time mt-4">
-                      <h6>Time</h6>
-                      <span>11:40 AM</span>
+                      <h6>username : </h6>
+                      <span>{{item.username}}</span>
                     </div>
                     <div class="profile-location mt-4">
-                      <h6>location</h6>
-                      <span>California, USA</span>
+                      <h6>id : </h6>
+                      <span>{{item._id}}</span>
                     </div>
                   </div>
 
