@@ -7,11 +7,12 @@
 
       <div class="text-center p-4 ">
         <div class="mb-4 ">
+          
           <img alt="" class="rounded-circle avatar-lg img-thumbnail" src="{{item.profilePicture}}" />
           <span class="img-box">
             <label class="images-btn">
               <input type="file" name="image" accept="image/gif,image/jpeg,image/jpg,image/png" multiple=""
-                data-original-title="upload photos" style="display: none;">
+                data-original-title="upload photos" style="display: none;" (change)="uploadPhoto($event)">
               <i class="fas fa-pen"></i>
             </label>
           </span>
@@ -53,26 +54,107 @@
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <div class="container">
-                    <div class="navbar">
-                      <div class="profile-name mt-3">
-                        <h6>Name : </h6>
-                        <span>{{item.name}}</span>
-                      </div>
-                      <button class="btn edit-btn
-                            " type="submit"><i class="fas fa-edit me-2"
-                          style="color: white; font-size: 0.8em;"></i>Edit</button>
-                    </div>
 
-                    <div class="profile-email mt-4">
-                      <h6>Email : </h6>
-                      <span>{{item.email}}</span>
+
+
+                  <div class="container">
+                  
+                  <div class="navbar">
+                    <div class="profile-name mt-3">
+                      <h6>Name :</h6>
+                      <span *ngIf="!editableFields['name']">{{ item.name }}</span>
+                      <input
+                        *ngIf="editableFields['name']"
+                        type="text"
+                        [(ngModel)]="item.name"
+                        class="form-control bg-soft-light border-light ng-pristine ng-valid ng-touched"
+                        maxlength="20"
+                        style="height: 36px"
+                      />
                     </div>
+                    <button
+                      *ngIf="!editableFields['name']"
+                      class="btn edit-btn btn-sm"
+                      type="button"
+                      (click)="toggleEdit('name')"
+                    >
+                      <i class="fas fa-edit me-2" style="color: white; font-size: 0.8em;"></i> Edit
+                    </button>
+                    <button
+                      *ngIf="editableFields['name']"
+                      class="btn btn-primary btn-sm"
+                      type="button"
+                      (click)="saveInfo('name')"
+                    >
+                      Save
+                    </button>
+                  </div>
+                
+                  <!-- Email Section -->
+                  <div class="navbar">
+                    <div class="profile-email mt-3">
+                      <h6>Email</h6>
+                      <span *ngIf="!editableFields['email']">{{ item.email }}</span>
+                      <input
+                        *ngIf="editableFields['email']"
+                        type="email"
+                        [(ngModel)]="item.email"
+                        class="form-control"
+                        maxlength="50"
+                       
+                      />
+                    </div>
+                    <button
+                      *ngIf="!editableFields['email']"
+                      class="btn edit-btn btn-sm"
+                      type="button"
+                      (click)="toggleEdit('email')"
+                    >
+                      <i class="fas fa-edit me-2" style="color: white; font-size: 0.8em;"></i> Edit
+                    </button>
+                    <button
+                      *ngIf="editableFields['email']"
+                      class="btn btn-primary btn-sm"
+                      type="button"
+                      (click)="saveInfo('email')"
+                    >
+                      Save
+                    </button>
+                  </div>
+                
+                  <!-- Username Section -->
+                  <div class="navbar">
                     <div class="profile-time mt-4">
-                      <h6>username : </h6>
-                      <span>{{item.username}}</span>
+                      <h6>Username :</h6>
+                      <span *ngIf="!editableFields['username']">{{ item.username }}</span>
+                      <input
+                        *ngIf="editableFields['username']"
+                        type="text"
+                        [(ngModel)]="item.username"
+                        class="form-control"
+                        maxlength="20"
+                      />
                     </div>
-                    <div class="profile-location mt-4">
+                    <button
+                      *ngIf="!editableFields['username']"
+                      class="btn edit-btn btn-sm"
+                      type="button"
+                      (click)="toggleEdit('username')"
+                    >
+                      <i class="fas fa-edit me-2" style="color: white; font-size: 0.8em;"></i> Edit
+                    </button>
+                    <button
+                      *ngIf="editableFields['username']"
+                      class="btn btn-primary btn-sm"
+                      type="button"
+                      (click)="saveInfo('username')"
+                    >
+                      Save
+                    </button>
+                  </div>
+                  
+
+                  <div class="profile-location mt-4">
                       <h6>id : </h6>
                       <span>{{item._id}}</span>
                     </div>

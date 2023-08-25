@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
     let id = this.token.getUserId().id;
     this.profile.getProfile(id).subscribe((res) => {
       this.profileData.push(res);
-      console.log(this.profileData);
+      
     });
     
   }

@@ -186,6 +186,7 @@ i{
 
   .img-box{
   position: relative;
+ 
   }
   .images-btn{
    position: absolute;
@@ -198,11 +199,29 @@ i{
     top: 30px;
     right: 1px;
     border: 1.5px solid transparent;
+    cursor: pointer;
   }
   .img-box i{
     padding-top: 10px;
      padding-right: 5px;
   }
   
-   
-   
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #a6b0cf;
+    background-color: #262e35;
+    background-clip: padding-box;
+    border: 1px solid #36404a;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.border-light {
+  border-color: #36404a !important;
+}

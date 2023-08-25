@@ -18,4 +18,12 @@ export class UserService {
       return this.http.get(`${this.url}/users`)
     }
 
+    updateProfile(id : string , data : any):Observable<any>{
+      return this.http.post(`${this.url}/profile/${id}` ,data)
+    }
+
+    updateUserData(id: string , data : any):Observable<any>{
+      return this.http.put(`${this.url}/${id}` ,data)
+    }
+
 }
