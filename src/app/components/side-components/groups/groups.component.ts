@@ -5,6 +5,8 @@ import { GroupService } from 'src/app/services/group.service';
 import { TokenService } from 'src/app/services/token.service';
 import { group } from 'src/app/interfaces/groupsInterface';
 import { GetFirstLetterPipe } from 'src/app/utils/get-first-letter.pipe';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-groups',
@@ -18,7 +20,9 @@ export class GroupsComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     private group : GroupService,
-    private token : TokenService
+    private token : TokenService,
+    private _snackBar: MatSnackBar,
+ 
     ) { }
 
   ngOnInit(): void {
@@ -34,6 +38,10 @@ export class GroupsComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.getGroups();
+        this._snackBar.open(result.msg, 'Close', {
+          panelClass: 'my-custom-snackbar',
+          duration: 3000,
+        });
       }
     });
   }
@@ -45,6 +53,8 @@ export class GroupsComponent implements OnInit {
       this.groups = res
     })
   }
+
+ 
 
 
 }

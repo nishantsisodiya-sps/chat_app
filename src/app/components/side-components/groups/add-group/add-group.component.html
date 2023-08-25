@@ -88,16 +88,16 @@
                               <input
                                 _ngcontent-elo-c125=""
                                 type="checkbox"
-                                [id]="'memberCheck' + item"
+                                [id]="'memberCheck' + item.username"
                                 class="form-check-input"
-                                (change)="toggleMemberSelection(item)"
-                                [checked]="isSelected(item)"
+                                (change)="toggleMemberSelection(item.username)"
+                                [checked]="isSelected(item.username)"
                               />
                               <label
                                 _ngcontent-elo-c125=""
-                                [for]="'memberCheck' + item"
+                                [for]="'memberCheck' + item.username"
                                 class="form-check-label"
-                                >{{ item }}</label
+                                >{{ item.username | titlecase}}</label
                               >
                             </div>
                           </li>
