@@ -12,10 +12,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class SettingsComponent implements OnInit {
   profileData: profile[] = [];
-  // editableemail : boolean = false
-  // editablename : boolean = false
-  // editableUsername : boolean = false
-
+  public id = this.token.getUserId().id
+  item : any
   editableFields: { [key: string]: boolean } = {
     email: false,
     name: false,
@@ -35,8 +33,7 @@ export class SettingsComponent implements OnInit {
 
 
   getProfile() {
-    let id = this.token.getUserId().id;
-    this.profile.getProfile(id).subscribe((res) => {
+    this.profile.getProfile(this.id).subscribe((res) => {
       this.profileData=[]
       this.profileData.push(res);
     });
@@ -47,9 +44,15 @@ export class SettingsComponent implements OnInit {
     this.editableFields[field] = !this.editableFields[field];
   }
 
-  saveInfo(field: string) {
+  saveInfo(field: string , item : any) {
     this.editableFields[field] = false;
-    console.log(field);
+    let name = item.name
+    
+    this.profile.updateUser(this.id , name).subscribe(res=>{
+      console.log(res);
+    })
+    
+
   }
 
   uploadPhoto(event: any): void {

@@ -29,3 +29,17 @@ export interface ContactGroup {
   groupLetter: string;
   contacts: Contact[];
 }
+
+export interface content {
+  content : string,
+  createdAt : Date,
+  _id : string
+}
+
+
+export interface messages {
+  messages : [content],
+  recipient : user,
+  sender : user,
+  _id: string
+}

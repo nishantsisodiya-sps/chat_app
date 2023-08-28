@@ -84,7 +84,7 @@
                       *ngIf="editableFields['name']"
                       class="btn btn-primary btn-sm"
                       type="button"
-                      (click)="saveInfo('name')"
+                      (click)="saveInfo('name' , item)"
                     >
                       Save
                     </button>
@@ -116,7 +116,7 @@
                       *ngIf="editableFields['email']"
                       class="btn btn-primary btn-sm"
                       type="button"
-                      (click)="saveInfo('email')"
+                      (click)="saveInfo('email' , item)"
                     >
                       Save
                     </button>
@@ -147,7 +147,7 @@
                       *ngIf="editableFields['username']"
                       class="btn btn-primary btn-sm"
                       type="button"
-                      (click)="saveInfo('username')"
+                      (click)="saveInfo('username' , item)"
                     >
                       Save
                     </button>

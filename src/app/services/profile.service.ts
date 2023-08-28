@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { user } from '../interfaces/profileInterface';
 
 @Injectable({
   providedIn: 'root',
@@ -12,5 +13,9 @@ export class ProfileService {
 
   getProfile(id: string): Observable<any> {
     return this.http.get(`${this.url}/${id}`);
+  }
+
+  updateUser(id : string , data : user):Observable<any>{
+    return this.http.put(`${this.url}/${id}` , data)
   }
 }
